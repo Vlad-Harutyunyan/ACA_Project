@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home page
+{% endblock title %}
+
+{% block links %}
+
+{% endblock links %}
+
+
+
+
+
+{% block content %}
+
+<ul>
+
+<p>Routes </p>
+    <li>
+		<a href="{{ url_for('users.test_route') }}">Users module</a>
+    </li>
+	<li>
+		<a href="{{ url_for('meals.test_route') }}">Meals module</a>
+	</li>
+
+</ul>
+
+{% endblock content %}
+

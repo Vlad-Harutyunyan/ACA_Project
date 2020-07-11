@@ -1,0 +1,4 @@
+APP_NAME = ''
+APP_VERSION = '0.0.1'
+DEBUG = True
+
