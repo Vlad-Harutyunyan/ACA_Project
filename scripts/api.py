@@ -79,13 +79,14 @@ def parse_meals():
         data  = json.load(unparse_meals)
     cnt_id = 1
     ingr_meal = []
-    
+
     for meal in data :
         meal_obj = {
             'id':cnt_id,
             'name':meal[0]['strMeal'],
             'category_id':filter_json('name',meal[0]['strCategory'],f"{thisfolder}/categories.json"),
             'area_id':filter_json('name',meal[0]['strArea'],f"{thisfolder}/areas.json"),
+            'like_count':0,
             'instruction':meal[0]['strInstructions'],
             'img_link':meal[0]['strMealThumb'],
             'tags':meal[0]['strTags'],
