@@ -1,4 +1,4 @@
-from db import db
+from lib.db import db
 from scripts.api import meals, ingredient, meal_ingredient, area, categories
 import pandas as pd
 from flask import Flask,render_template
