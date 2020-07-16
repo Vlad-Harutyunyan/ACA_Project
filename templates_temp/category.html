@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block html_title %}search{% endblock %}
+
+{% block content %}
+<div class="main">
+<ol>
+{% if data!=0 %}
+<img src='https://www.themealdb.com/images/category/{{name}}' alt="PikPng.com_chef-png_998422.png">
+
+{%for i in data[0]%} 
+
+<li>{{i}}</li>
+{% else %}
+<h4> no such category </h4>
+{%endfor%}
+{%endif %}
+</div>
+{% endblock %}
+
+</ol>

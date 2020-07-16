@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block html_title %}search{% endblock %}
+
+{% block content %}
+<div class="main">
+<ul>
+{% for i in data%}
+<img src='{{i[6]}}' width="193" height="130" >
+<li>{{i[1]}}</li>
+<li>{{i[5]}}</li>
+
+{% endfor%}
+</ul>
+</div>
+{% endblock %}

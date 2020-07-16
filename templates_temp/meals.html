@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block html_title %}search{% endblock %}
+
+{% block content %}
+<div class="main">
+<ul>
+<img src='{{data[0][3]}}' width="300" height="300" >
+<h4> {{data[0][0]}}</h4>
+<li>AREA: {{data[0][1]}}</li>
+<li>RECIPE: {{data[0][2]}}</li>
+
+
+
+
+</ul>
+</div>
+{% endblock %}
