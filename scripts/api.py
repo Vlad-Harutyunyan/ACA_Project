@@ -109,30 +109,6 @@ def parse_meals():
     list_to_json_file(f'{thisfolder}/parsed_meals.json',res)
     print('Done! meals parsed.')
     
-# makes a list of lists comprised of dict values
-def prep_query(file_name,fields):
-    with open (file_name,encoding="utf8") as jf :
-        list1  = json.load(jf)
-    list_new=[]
-    for i in range (len(list1)):
-        list_new.append([])
-    for j in range (0,len(list1)):
-        for k,v in list1[j].items():
-            if k in fields:
-                list_new[j].append(v)
-    return list_new
-
-meals=prep_query("scripts/parsed_meals.json", ("id","name","category_id", "area_id", "like_count", "instructions","img_link", "tags", "video_link"))
-print("meals", meals)
-ingredient=prep_query("scripts/ingredients.json",("id","name","description"))
-print("ingredient", ingredient)
-meal_ingredient=prep_query("scripts/ingredient_list.json",("meal_id", "ingredient_id"))
-print("meal_ingredient", meal_ingredient)
-categories=prep_query("scripts/categories.json",("id", "name", "img_link", "description"))
-print("categories", categories)
-area=prep_query("scripts/areas.json",("id", "name"))
-print("area",area)
-
 
 
 if __name__ == "__main__": 
