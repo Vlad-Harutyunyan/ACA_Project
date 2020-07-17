@@ -87,7 +87,7 @@ def parse_meals():
             'category_id':filter_json('name',meal[0]['strCategory'],f"{thisfolder}/categories.json"),
             'area_id':filter_json('name',meal[0]['strArea'],f"{thisfolder}/areas.json"),
             'like_count':0,
-            'instruction':meal[0]['strInstructions'],
+            'instructions':meal[0]['strInstructions'],
             'img_link':meal[0]['strMealThumb'],
             'tags':meal[0]['strTags'],
             'video_link':meal[0]['strYoutube'],
@@ -99,7 +99,7 @@ def parse_meals():
                 if ingr_id :
                     obj = {
                         'meal_id':cnt_id,
-                        'igredient_id':ingr_id
+                        'ingredient_id':ingr_id
                     }
                     ingr_meal.append(obj)
                 
